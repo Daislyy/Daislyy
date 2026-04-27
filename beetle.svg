@@ -1,0 +1,238 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <radialGradient id="bodyGrad" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#4a7c59"/>
+      <stop offset="60%" stop-color="#1a3a25"/>
+      <stop offset="100%" stop-color="#0a1a10"/>
+    </radialGradient>
+    <radialGradient id="shellGrad" cx="40%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#5a9e6f"/>
+      <stop offset="50%" stop-color="#1e5c30"/>
+      <stop offset="100%" stop-color="#0d2b17"/>
+    </radialGradient>
+    <radialGradient id="headGrad" cx="40%" cy="35%" r="55%">
+      <stop offset="0%" stop-color="#3d6b4a"/>
+      <stop offset="100%" stop-color="#0f2819"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="3" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+
+    <!-- Wing animation -->
+    <style>
+      .beetle-group {
+        transform-origin: 100px 110px;
+        animation: float 3s ease-in-out infinite;
+      }
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-8px); }
+      }
+
+      .wing-left {
+        transform-origin: 100px 110px;
+        animation: wingFlap 0.3s ease-in-out infinite alternate;
+      }
+      .wing-right {
+        transform-origin: 100px 110px;
+        animation: wingFlapR 0.3s ease-in-out infinite alternate;
+      }
+      @keyframes wingFlap {
+        0% { transform: rotate(-5deg) scaleX(1); }
+        100% { transform: rotate(-15deg) scaleX(0.85); }
+      }
+      @keyframes wingFlapR {
+        0% { transform: rotate(5deg) scaleX(1); }
+        100% { transform: rotate(15deg) scaleX(0.85); }
+      }
+
+      .antenna-left {
+        transform-origin: 86px 72px;
+        animation: antennaWave 2s ease-in-out infinite alternate;
+      }
+      .antenna-right {
+        transform-origin: 114px 72px;
+        animation: antennaWaveR 2s ease-in-out infinite alternate;
+      }
+      @keyframes antennaWave {
+        0% { transform: rotate(-5deg); }
+        100% { transform: rotate(10deg); }
+      }
+      @keyframes antennaWaveR {
+        0% { transform: rotate(5deg); }
+        100% { transform: rotate(-10deg); }
+      }
+
+      .horn {
+        transform-origin: 100px 55px;
+        animation: hornBob 3s ease-in-out infinite;
+      }
+      @keyframes hornBob {
+        0%, 100% { transform: rotate(-2deg); }
+        50% { transform: rotate(2deg); }
+      }
+
+      .leg {
+        animation: legMove 0.5s ease-in-out infinite alternate;
+      }
+      .leg-2 { animation-delay: 0.15s; }
+      .leg-3 { animation-delay: 0.30s; }
+      .leg-4 { animation-delay: 0.10s; }
+      .leg-5 { animation-delay: 0.25s; }
+      .leg-6 { animation-delay: 0.40s; }
+      @keyframes legMove {
+        0% { transform: rotate(-8deg); }
+        100% { transform: rotate(8deg); }
+      }
+
+      .eye-glow {
+        animation: eyePulse 2s ease-in-out infinite;
+      }
+      @keyframes eyePulse {
+        0%, 100% { opacity: 0.8; r: 3; }
+        50% { opacity: 1; r: 3.5; }
+      }
+
+      .shine {
+        animation: shinePulse 2.5s ease-in-out infinite;
+      }
+      @keyframes shinePulse {
+        0%, 100% { opacity: 0.15; }
+        50% { opacity: 0.35; }
+      }
+    </style>
+  </defs>
+
+  <!-- Background circle (subtle) -->
+  <circle cx="100" cy="105" r="80" fill="#0a1a10" opacity="0.15"/>
+
+  <g class="beetle-group" filter="url(#shadow)">
+
+    <!-- === LEGS (behind body) === -->
+    <!-- Left legs -->
+    <g class="leg" style="transform-origin: 78px 115px;">
+      <line x1="78" y1="115" x2="48" y2="105" stroke="#1a3a25" stroke-width="3.5" stroke-linecap="round"/>
+      <line x1="48" y1="105" x2="32" y2="118" stroke="#1a3a25" stroke-width="3" stroke-linecap="round"/>
+    </g>
+    <g class="leg leg-2" style="transform-origin: 76px 128px;">
+      <line x1="76" y1="128" x2="44" y2="125" stroke="#1a3a25" stroke-width="3.5" stroke-linecap="round"/>
+      <line x1="44" y1="125" x2="28" y2="135" stroke="#1a3a25" stroke-width="3" stroke-linecap="round"/>
+    </g>
+    <g class="leg leg-3" style="transform-origin: 80px 142px;">
+      <line x1="80" y1="142" x2="50" y2="145" stroke="#1a3a25" stroke-width="3.5" stroke-linecap="round"/>
+      <line x1="50" y1="145" x2="36" y2="158" stroke="#1a3a25" stroke-width="3" stroke-linecap="round"/>
+    </g>
+
+    <!-- Right legs -->
+    <g class="leg leg-4" style="transform-origin: 122px 115px;">
+      <line x1="122" y1="115" x2="152" y2="105" stroke="#1a3a25" stroke-width="3.5" stroke-linecap="round"/>
+      <line x1="152" y1="105" x2="168" y2="118" stroke="#1a3a25" stroke-width="3" stroke-linecap="round"/>
+    </g>
+    <g class="leg leg-5" style="transform-origin: 124px 128px;">
+      <line x1="124" y1="128" x2="156" y2="125" stroke="#1a3a25" stroke-width="3.5" stroke-linecap="round"/>
+      <line x1="156" y1="125" x2="172" y2="135" stroke="#1a3a25" stroke-width="3" stroke-linecap="round"/>
+    </g>
+    <g class="leg leg-6" style="transform-origin: 120px 142px;">
+      <line x1="120" y1="142" x2="150" y2="145" stroke="#1a3a25" stroke-width="3.5" stroke-linecap="round"/>
+      <line x1="150" y1="145" x2="164" y2="158" stroke="#1a3a25" stroke-width="3" stroke-linecap="round"/>
+    </g>
+
+    <!-- === ELYTRA (Wing covers) === -->
+    <!-- Left wing cover -->
+    <g class="wing-left">
+      <ellipse cx="85" cy="128" rx="26" ry="38" fill="url(#shellGrad)" transform="rotate(-8, 85, 128)"/>
+      <!-- Wing line detail -->
+      <line x1="76" y1="98" x2="72" y2="162" stroke="#0a2010" stroke-width="1.2" opacity="0.5" stroke-linecap="round"/>
+      <!-- Shine on wing -->
+      <ellipse cx="80" cy="112" rx="8" ry="14" fill="white" opacity="0.08" class="shine" transform="rotate(-8, 80, 112)"/>
+    </g>
+
+    <!-- Right wing cover -->
+    <g class="wing-right">
+      <ellipse cx="115" cy="128" rx="26" ry="38" fill="url(#shellGrad)" transform="rotate(8, 115, 128)"/>
+      <line x1="124" y1="98" x2="128" y2="162" stroke="#0a2010" stroke-width="1.2" opacity="0.5" stroke-linecap="round"/>
+      <ellipse cx="120" cy="112" rx="8" ry="14" fill="white" opacity="0.08" class="shine" transform="rotate(8, 120, 112)"/>
+    </g>
+
+    <!-- Center line between wing covers -->
+    <line x1="100" y1="93" x2="100" y2="168" stroke="#081508" stroke-width="2" opacity="0.6"/>
+
+    <!-- === THORAX === -->
+    <ellipse cx="100" cy="105" rx="24" ry="18" fill="url(#bodyGrad)"/>
+    <ellipse cx="94" cy="100" rx="6" ry="5" fill="white" opacity="0.06" class="shine"/>
+
+    <!-- === HEAD === -->
+    <ellipse cx="100" cy="80" rx="20" ry="16" fill="url(#headGrad)"/>
+    <!-- Head shine -->
+    <ellipse cx="94" cy="74" rx="5" ry="4" fill="white" opacity="0.10" class="shine"/>
+
+    <!-- === HORN (Rhinoceros horn!) === -->
+    <g class="horn">
+      <!-- Main horn -->
+      <path d="M 100 67 C 95 60 92 48 96 35 C 97 30 100 25 100 25 C 100 25 103 30 104 35 C 108 48 105 60 100 67 Z"
+            fill="url(#headGrad)" stroke="#0a2010" stroke-width="0.5"/>
+      <!-- Horn top shine -->
+      <path d="M 99 40 C 97 45 96 52 98 60" stroke="white" stroke-width="1.5" opacity="0.2" fill="none" stroke-linecap="round"/>
+
+      <!-- Secondary small horn at base -->
+      <path d="M 100 68 C 97 64 93 62 91 60 C 93 61 96 64 100 68 Z"
+            fill="url(#headGrad)" stroke="#0a2010" stroke-width="0.5"/>
+      <path d="M 100 68 C 103 64 107 62 109 60 C 107 61 104 64 100 68 Z"
+            fill="url(#headGrad)" stroke="#0a2010" stroke-width="0.5"/>
+    </g>
+
+    <!-- === ANTENNAE === -->
+    <g class="antenna-left">
+      <path d="M 86 72 C 78 65 70 58 62 52" stroke="#1a3a25" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <!-- Antenna tip ball -->
+      <circle cx="62" cy="52" r="3.5" fill="#2ECC71" opacity="0.8" filter="url(#glow)"/>
+      <circle cx="62" cy="52" r="2" fill="#7fffc4" opacity="0.9"/>
+    </g>
+    <g class="antenna-right">
+      <path d="M 114 72 C 122 65 130 58 138 52" stroke="#1a3a25" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <circle cx="138" cy="52" r="3.5" fill="#2ECC71" opacity="0.8" filter="url(#glow)"/>
+      <circle cx="138" cy="52" r="2" fill="#7fffc4" opacity="0.9"/>
+    </g>
+
+    <!-- === EYES === -->
+    <circle cx="91" cy="76" r="5" fill="#0a0a0a"/>
+    <circle class="eye-glow" cx="91" cy="76" r="3" fill="#2ECC71" opacity="0.8"/>
+    <circle cx="91" cy="74.5" r="1.2" fill="white" opacity="0.7"/>
+
+    <circle cx="109" cy="76" r="5" fill="#0a0a0a"/>
+    <circle class="eye-glow" cx="109" cy="76" r="3" fill="#2ECC71" opacity="0.8"/>
+    <circle cx="109" cy="74.5" r="1.2" fill="white" opacity="0.7"/>
+
+    <!-- === ABDOMEN TIP === -->
+    <ellipse cx="100" cy="164" rx="14" ry="8" fill="url(#bodyGrad)"/>
+
+  </g>
+
+  <!-- Sparkles around the beetle -->
+  <g opacity="0.6">
+    <circle cx="35" cy="60" r="2" fill="#2ECC71">
+      <animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite" begin="0s"/>
+      <animate attributeName="r" values="1;3;1" dur="2s" repeatCount="indefinite" begin="0s"/>
+    </circle>
+    <circle cx="165" cy="75" r="2" fill="#2ECC71">
+      <animate attributeName="opacity" values="0;1;0" dur="2.3s" repeatCount="indefinite" begin="0.5s"/>
+      <animate attributeName="r" values="1;2.5;1" dur="2.3s" repeatCount="indefinite" begin="0.5s"/>
+    </circle>
+    <circle cx="155" cy="165" r="1.5" fill="#7fffc4">
+      <animate attributeName="opacity" values="0;1;0" dur="1.8s" repeatCount="indefinite" begin="0.3s"/>
+    </circle>
+    <circle cx="45" cy="155" r="1.5" fill="#7fffc4">
+      <animate attributeName="opacity" values="0;1;0" dur="2.1s" repeatCount="indefinite" begin="0.8s"/>
+    </circle>
+    <circle cx="100" cy="185" r="2" fill="#2ECC71">
+      <animate attributeName="opacity" values="0;1;0" dur="2.5s" repeatCount="indefinite" begin="1s"/>
+    </circle>
+  </g>
+</svg>
