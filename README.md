@@ -104,7 +104,7 @@ const daislyy = {
 
 <div align="center">
 
-### 🪲 *"All i wannd do is trade this life for something new"* 🪲
+### 🪲 *"All i wanna do is trade this life for something new"* 🪲
 
 ![Profile Views](https://komarev.com/ghpvc/?username=Daislyy&color=2ECC71&style=for-the-badge&label=PROFILE+VIEWS)
 
