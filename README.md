@@ -29,12 +29,12 @@
 
 ```javascript
 const daislyy = {
-  pronouns:     "he" | "she" | "they",
+  pronouns:     "he" | "him" |,
   location:     "🇮🇩 Indonesia",
   currentFocus: "Building cool things on the web",
   learning:     ["TypeScript", "System Design", "Open Source"],
   funFact:      "I debug with console.log and I'm not ashamed 🐛",
-  motto:        "Code like a rhinoceros beetle — strong, resilient, unstoppable 🦏🪲"
+  motto:        "Code like a rhinoceros beetle strong, resilient, unstoppable 🦏🪲"
 };
 ```
 
@@ -104,7 +104,7 @@ const daislyy = {
 
 <div align="center">
 
-### 🪲 *"Strong as a rhinoceros beetle — I carry heavy code and still fly"* 🪲
+### 🪲 *"All i wannd do is trade this life for something new"* 🪲
 
 ![Profile Views](https://komarev.com/ghpvc/?username=Daislyy&color=2ECC71&style=for-the-badge&label=PROFILE+VIEWS)
 
