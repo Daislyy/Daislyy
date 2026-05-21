@@ -1,238 +1,403 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
   <defs>
+    <!-- Metallic Red Gradient for Body -->
     <radialGradient id="bodyGrad" cx="50%" cy="40%" r="55%">
-      <stop offset="0%" stop-color="#4a7c59"/>
-      <stop offset="60%" stop-color="#1a3a25"/>
-      <stop offset="100%" stop-color="#0a1a10"/>
+      <stop offset="0%" stop-color="#ff3b56"/>
+      <stop offset="50%" stop-color="#a80a24"/>
+      <stop offset="100%" stop-color="#3d000a"/>
     </radialGradient>
+    
+    <!-- Metallic Red Gradient for Elytra/Shell -->
     <radialGradient id="shellGrad" cx="40%" cy="30%" r="60%">
-      <stop offset="0%" stop-color="#5a9e6f"/>
-      <stop offset="50%" stop-color="#1e5c30"/>
-      <stop offset="100%" stop-color="#0d2b17"/>
+      <stop offset="0%" stop-color="#ff5c75"/>
+      <stop offset="45%" stop-color="#c9183b"/>
+      <stop offset="85%" stop-color="#80081d"/>
+      <stop offset="100%" stop-color="#3d000a"/>
     </radialGradient>
+    
+    <!-- Metallic Red Gradient for Head/Horn -->
     <radialGradient id="headGrad" cx="40%" cy="35%" r="55%">
-      <stop offset="0%" stop-color="#3d6b4a"/>
-      <stop offset="100%" stop-color="#0f2819"/>
+      <stop offset="0%" stop-color="#e52d4c"/>
+      <stop offset="70%" stop-color="#8c071d"/>
+      <stop offset="100%" stop-color="#2d0007"/>
     </radialGradient>
+
+    <!-- Dark Mechanical Parts Gradient -->
+    <radialGradient id="darkGrad" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#475569"/>
+      <stop offset="60%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </radialGradient>
+    
+    <!-- Gold Trim Gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffe066"/>
+      <stop offset="50%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#8a6d00"/>
+    </linearGradient>
+
+    <!-- Chrome/Silver Reflective Gradient for Legs & Joints -->
+    <linearGradient id="chromeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="20%" stop-color="#e2e8f0"/>
+      <stop offset="50%" stop-color="#94a3b8"/>
+      <stop offset="80%" stop-color="#475569"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    
+    <!-- Cyan Cybernetic Glow Gradient -->
+    <radialGradient id="cyanGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e0f7fa"/>
+      <stop offset="40%" stop-color="#00e5ff"/>
+      <stop offset="100%" stop-color="#00838f"/>
+    </radialGradient>
+
+    <!-- Glowing Eye Filter -->
     <filter id="glow">
-      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feGaussianBlur stdDeviation="1.8" result="coloredBlur"/>
       <feMerge>
         <feMergeNode in="coloredBlur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
+
+    <!-- Mechanical Shadow Filter -->
     <filter id="shadow">
-      <feDropShadow dx="0" dy="4" stdDeviation="3" flood-color="#000000" flood-opacity="0.4"/>
+      <feDropShadow dx="0" dy="5" stdDeviation="3.5" flood-color="#000000" flood-opacity="0.5"/>
     </filter>
 
-    <!-- Wing animation -->
     <style>
       .beetle-group {
         transform-origin: 100px 110px;
-        animation: float 3s ease-in-out infinite;
+        animation: float 3.5s ease-in-out infinite;
       }
       @keyframes float {
         0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-8px); }
+        50% { transform: translateY(-7px); }
       }
 
       .wing-left {
-        transform-origin: 100px 110px;
-        animation: wingFlap 0.3s ease-in-out infinite alternate;
+        transform-origin: 100px 105px;
+        animation: wingFlapL 0.4s ease-in-out infinite alternate;
       }
       .wing-right {
-        transform-origin: 100px 110px;
-        animation: wingFlapR 0.3s ease-in-out infinite alternate;
+        transform-origin: 100px 105px;
+        animation: wingFlapR 0.4s ease-in-out infinite alternate;
       }
-      @keyframes wingFlap {
-        0% { transform: rotate(-5deg) scaleX(1); }
-        100% { transform: rotate(-15deg) scaleX(0.85); }
+      @keyframes wingFlapL {
+        0% { transform: rotate(-8deg); }
+        100% { transform: rotate(-24deg); }
       }
       @keyframes wingFlapR {
-        0% { transform: rotate(5deg) scaleX(1); }
-        100% { transform: rotate(15deg) scaleX(0.85); }
+        0% { transform: rotate(8deg); }
+        100% { transform: rotate(24deg); }
       }
 
       .antenna-left {
         transform-origin: 86px 72px;
-        animation: antennaWave 2s ease-in-out infinite alternate;
+        animation: antennaWaveL 2s ease-in-out infinite alternate;
       }
       .antenna-right {
         transform-origin: 114px 72px;
         animation: antennaWaveR 2s ease-in-out infinite alternate;
       }
-      @keyframes antennaWave {
-        0% { transform: rotate(-5deg); }
-        100% { transform: rotate(10deg); }
+      @keyframes antennaWaveL {
+        0% { transform: rotate(-3deg); }
+        100% { transform: rotate(8deg); }
       }
       @keyframes antennaWaveR {
-        0% { transform: rotate(5deg); }
-        100% { transform: rotate(-10deg); }
+        0% { transform: rotate(3deg); }
+        100% { transform: rotate(-8deg); }
       }
 
       .horn {
-        transform-origin: 100px 55px;
-        animation: hornBob 3s ease-in-out infinite;
+        transform-origin: 100px 72px;
+        animation: hornCharge 3.5s ease-in-out infinite;
       }
-      @keyframes hornBob {
-        0%, 100% { transform: rotate(-2deg); }
-        50% { transform: rotate(2deg); }
+      @keyframes hornCharge {
+        0%, 100% { transform: translateY(0px) scale(1); }
+        50% { transform: translateY(-2px) scale(1.02); }
       }
 
       .leg {
-        animation: legMove 0.5s ease-in-out infinite alternate;
+        animation: legHydraulic 0.6s ease-in-out infinite alternate;
       }
       .leg-2 { animation-delay: 0.15s; }
-      .leg-3 { animation-delay: 0.30s; }
-      .leg-4 { animation-delay: 0.10s; }
+      .leg-3 { animation-delay: 0.3s; }
+      .leg-4 { animation-delay: 0.1s; }
       .leg-5 { animation-delay: 0.25s; }
-      .leg-6 { animation-delay: 0.40s; }
-      @keyframes legMove {
-        0% { transform: rotate(-8deg); }
-        100% { transform: rotate(8deg); }
+      .leg-6 { animation-delay: 0.4s; }
+      @keyframes legHydraulic {
+        0% { transform: rotate(-3deg); }
+        100% { transform: rotate(3deg); }
       }
 
       .eye-glow {
-        animation: eyePulse 2s ease-in-out infinite;
+        animation: cyberPulse 2s ease-in-out infinite;
       }
-      @keyframes eyePulse {
-        0%, 100% { opacity: 0.8; r: 3; }
-        50% { opacity: 1; r: 3.5; }
+      @keyframes cyberPulse {
+        0%, 100% { opacity: 0.7; }
+        50% { opacity: 1; filter: drop-shadow(0 0 3px #00e5ff); }
       }
 
       .shine {
-        animation: shinePulse 2.5s ease-in-out infinite;
+        animation: shineSweep 3s ease-in-out infinite;
       }
-      @keyframes shinePulse {
-        0%, 100% { opacity: 0.15; }
-        50% { opacity: 0.35; }
+      @keyframes shineSweep {
+        0%, 100% { opacity: 0.08; }
+        50% { opacity: 0.22; }
+      }
+
+      .hud-radar {
+        transform-origin: 100px 105px;
+        animation: rotateRadar 25s linear infinite;
+      }
+      @keyframes rotateRadar {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
       }
     </style>
   </defs>
 
-  <!-- Background circle (subtle) -->
-  <circle cx="100" cy="105" r="80" fill="#0a1a10" opacity="0.15"/>
+  <!-- High-Tech Radar HUD Background -->
+  <g class="hud-radar" opacity="0.3">
+    <!-- Circular radar lines -->
+    <circle cx="100" cy="105" r="82" fill="none" stroke="#ff3b56" stroke-width="0.8" stroke-dasharray="8 6 2 6" opacity="0.4"/>
+    <circle cx="100" cy="105" r="68" fill="none" stroke="#ff3b56" stroke-width="0.5" opacity="0.25"/>
+    <circle cx="100" cy="105" r="45" fill="none" stroke="#ff3b56" stroke-width="0.5" stroke-dasharray="4 4" opacity="0.2"/>
+    
+    <!-- Crosshairs -->
+    <line x1="100" y1="15" x2="100" y2="195" stroke="#ff3b56" stroke-width="0.5" stroke-dasharray="4 8" opacity="0.3"/>
+    <line x1="10" y1="105" x2="190" y2="105" stroke="#ff3b56" stroke-width="0.5" stroke-dasharray="4 8" opacity="0.3"/>
+    
+    <!-- Outer target corner ticks -->
+    <path d="M 30,105 A 70,70 0 0,1 100,35" fill="none" stroke="#ff3b56" stroke-width="1.2" stroke-dasharray="15 120" opacity="0.5"/>
+    <path d="M 170,105 A 70,70 0 0,1 100,175" fill="none" stroke="#ff3b56" stroke-width="1.2" stroke-dasharray="15 120" opacity="0.5"/>
+  </g>
 
+  <!-- Subtle glow backing -->
+  <circle cx="100" cy="105" r="60" fill="url(#bodyGrad)" opacity="0.08" filter="url(#glow)"/>
+
+  <!-- Main Zecter Group with Drop Shadow -->
   <g class="beetle-group" filter="url(#shadow)">
 
-    <!-- === LEGS (behind body) === -->
-    <!-- Left legs -->
-    <g class="leg" style="transform-origin: 78px 115px;">
-      <line x1="78" y1="115" x2="48" y2="105" stroke="#1a3a25" stroke-width="3.5" stroke-linecap="round"/>
-      <line x1="48" y1="105" x2="32" y2="118" stroke="#1a3a25" stroke-width="3" stroke-linecap="round"/>
+    <!-- === MECHANICAL LEGS (behind body) === -->
+    <!-- Left Leg 1 -->
+    <g class="leg" style="transform-origin: 76px 115px;">
+      <!-- Joint -->
+      <line x1="76" y1="115" x2="54" y2="112" stroke="#1e293b" stroke-width="4.5" stroke-linecap="round"/>
+      <line x1="54" y1="112" x2="42" y2="110" stroke="url(#chromeGrad)" stroke-width="3" stroke-linecap="round"/>
+      <!-- Capsule Pod -->
+      <rect x="26" y="102" width="22" height="11" rx="5.5" fill="url(#chromeGrad)" stroke="#0f172a" stroke-width="1"/>
+      <rect x="28" y="104" width="18" height="2" rx="1" fill="#ffffff" opacity="0.6"/>
     </g>
-    <g class="leg leg-2" style="transform-origin: 76px 128px;">
-      <line x1="76" y1="128" x2="44" y2="125" stroke="#1a3a25" stroke-width="3.5" stroke-linecap="round"/>
-      <line x1="44" y1="125" x2="28" y2="135" stroke="#1a3a25" stroke-width="3" stroke-linecap="round"/>
+    <!-- Left Leg 2 -->
+    <g class="leg leg-2" style="transform-origin: 74px 130px;">
+      <line x1="74" y1="130" x2="50" y2="130" stroke="#1e293b" stroke-width="4.5" stroke-linecap="round"/>
+      <line x1="50" y1="130" x2="38" y2="130" stroke="url(#chromeGrad)" stroke-width="3" stroke-linecap="round"/>
+      <rect x="22" y="122" width="22" height="11" rx="5.5" fill="url(#chromeGrad)" stroke="#0f172a" stroke-width="1"/>
+      <rect x="24" y="124" width="18" height="2" rx="1" fill="#ffffff" opacity="0.6"/>
     </g>
-    <g class="leg leg-3" style="transform-origin: 80px 142px;">
-      <line x1="80" y1="142" x2="50" y2="145" stroke="#1a3a25" stroke-width="3.5" stroke-linecap="round"/>
-      <line x1="50" y1="145" x2="36" y2="158" stroke="#1a3a25" stroke-width="3" stroke-linecap="round"/>
-    </g>
-
-    <!-- Right legs -->
-    <g class="leg leg-4" style="transform-origin: 122px 115px;">
-      <line x1="122" y1="115" x2="152" y2="105" stroke="#1a3a25" stroke-width="3.5" stroke-linecap="round"/>
-      <line x1="152" y1="105" x2="168" y2="118" stroke="#1a3a25" stroke-width="3" stroke-linecap="round"/>
-    </g>
-    <g class="leg leg-5" style="transform-origin: 124px 128px;">
-      <line x1="124" y1="128" x2="156" y2="125" stroke="#1a3a25" stroke-width="3.5" stroke-linecap="round"/>
-      <line x1="156" y1="125" x2="172" y2="135" stroke="#1a3a25" stroke-width="3" stroke-linecap="round"/>
-    </g>
-    <g class="leg leg-6" style="transform-origin: 120px 142px;">
-      <line x1="120" y1="142" x2="150" y2="145" stroke="#1a3a25" stroke-width="3.5" stroke-linecap="round"/>
-      <line x1="150" y1="145" x2="164" y2="158" stroke="#1a3a25" stroke-width="3" stroke-linecap="round"/>
+    <!-- Left Leg 3 -->
+    <g class="leg leg-3" style="transform-origin: 78px 145px;">
+      <line x1="78" y1="145" x2="54" y2="148" stroke="#1e293b" stroke-width="4.5" stroke-linecap="round"/>
+      <line x1="54" y1="148" x2="42" y2="151" stroke="url(#chromeGrad)" stroke-width="3" stroke-linecap="round"/>
+      <rect x="26" y="141" width="22" height="11" rx="5.5" fill="url(#chromeGrad)" stroke="#0f172a" stroke-width="1"/>
+      <rect x="28" y="143" width="18" height="2" rx="1" fill="#ffffff" opacity="0.6"/>
     </g>
 
-    <!-- === ELYTRA (Wing covers) === -->
-    <!-- Left wing cover -->
+    <!-- Right Leg 1 -->
+    <g class="leg leg-4" style="transform-origin: 124px 115px;">
+      <line x1="124" y1="115" x2="146" y2="112" stroke="#1e293b" stroke-width="4.5" stroke-linecap="round"/>
+      <line x1="146" y1="112" x2="158" y2="110" stroke="url(#chromeGrad)" stroke-width="3" stroke-linecap="round"/>
+      <rect x="152" y="102" width="22" height="11" rx="5.5" fill="url(#chromeGrad)" stroke="#0f172a" stroke-width="1"/>
+      <rect x="154" y="104" width="18" height="2" rx="1" fill="#ffffff" opacity="0.6"/>
+    </g>
+    <!-- Right Leg 2 -->
+    <g class="leg leg-5" style="transform-origin: 126px 130px;">
+      <line x1="126" y1="130" x2="150" y2="130" stroke="#1e293b" stroke-width="4.5" stroke-linecap="round"/>
+      <line x1="150" y1="130" x2="162" y2="130" stroke="url(#chromeGrad)" stroke-width="3" stroke-linecap="round"/>
+      <rect x="156" y="122" width="22" height="11" rx="5.5" fill="url(#chromeGrad)" stroke="#0f172a" stroke-width="1"/>
+      <rect x="158" y="124" width="18" height="2" rx="1" fill="#ffffff" opacity="0.6"/>
+    </g>
+    <!-- Right Leg 3 -->
+    <g class="leg leg-6" style="transform-origin: 122px 145px;">
+      <line x1="122" y1="145" x2="146" y2="148" stroke="#1e293b" stroke-width="4.5" stroke-linecap="round"/>
+      <line x1="146" y1="148" x2="158" y2="151" stroke="url(#chromeGrad)" stroke-width="3" stroke-linecap="round"/>
+      <rect x="152" y="141" width="22" height="11" rx="5.5" fill="url(#chromeGrad)" stroke="#0f172a" stroke-width="1"/>
+      <rect x="154" y="143" width="18" height="2" rx="1" fill="#ffffff" opacity="0.6"/>
+    </g>
+
+    <!-- === UNDERBODY / CYBERNETIC CHASSIS === -->
+    <path d="M 82 100 Q 100 85 118 100 L 122 155 Q 100 178 78 155 Z" fill="url(#darkGrad)" stroke="#0f172a" stroke-width="1.5"/>
+    
+    <!-- Glowing Power Circuit Lines inside body -->
+    <path d="M 90 120 L 90 150 Q 100 162 110 150 L 110 120" fill="none" stroke="#00e5ff" stroke-width="1" opacity="0.6" filter="url(#glow)"/>
+    <line x1="100" y1="115" x2="100" y2="158" stroke="#00e5ff" stroke-width="1.5" opacity="0.8" filter="url(#glow)"/>
+    
+    <!-- Central Dial / Driver Core Slot -->
+    <circle cx="100" cy="122" r="15" fill="url(#darkGrad)" stroke="url(#chromeGrad)" stroke-width="2"/>
+    <circle cx="100" cy="122" r="10" fill="#0f172a"/>
+    <path d="M 94 122 H 106 M 100 116 V 128" stroke="#ff3b56" stroke-width="1.5" opacity="0.8"/>
+
+    <!-- === ELYTRA (Red Wing Covers) === -->
+    <!-- Left Wing Cover -->
     <g class="wing-left">
-      <ellipse cx="85" cy="128" rx="26" ry="38" fill="url(#shellGrad)" transform="rotate(-8, 85, 128)"/>
-      <!-- Wing line detail -->
-      <line x1="76" y1="98" x2="72" y2="162" stroke="#0a2010" stroke-width="1.2" opacity="0.5" stroke-linecap="round"/>
-      <!-- Shine on wing -->
-      <ellipse cx="80" cy="112" rx="8" ry="14" fill="white" opacity="0.08" class="shine" transform="rotate(-8, 80, 112)"/>
+      <!-- Shield shape -->
+      <ellipse cx="80" cy="132" rx="25" ry="38" fill="url(#shellGrad)" transform="rotate(-6, 80, 132)"/>
+      <ellipse cx="78" cy="132" rx="23" ry="36" fill="none" stroke="#3d000a" stroke-width="0.8" transform="rotate(-6, 80, 132)"/>
+      
+      <!-- Panel Detail line -->
+      <line x1="72" y1="102" x2="68" y2="164" stroke="#1f0206" stroke-width="1.5" opacity="0.6"/>
+      
+      <!-- Zecter Silver Ports -->
+      <circle cx="70" cy="110" r="3" fill="url(#chromeGrad)" stroke="#0f172a" stroke-width="0.8"/>
+      <circle cx="64" cy="118" r="3" fill="url(#chromeGrad)" stroke="#0f172a" stroke-width="0.8"/>
+      <circle cx="70" cy="110" r="1" fill="#1e293b"/>
+      <circle cx="64" cy="118" r="1" fill="#1e293b"/>
+      
+      <!-- Shine on Wing -->
+      <ellipse cx="76" cy="116" rx="7" ry="14" fill="#ffffff" opacity="0.1" class="shine" transform="rotate(-6, 76, 116)"/>
     </g>
 
-    <!-- Right wing cover -->
+    <!-- Right Wing Cover -->
     <g class="wing-right">
-      <ellipse cx="115" cy="128" rx="26" ry="38" fill="url(#shellGrad)" transform="rotate(8, 115, 128)"/>
-      <line x1="124" y1="98" x2="128" y2="162" stroke="#0a2010" stroke-width="1.2" opacity="0.5" stroke-linecap="round"/>
-      <ellipse cx="120" cy="112" rx="8" ry="14" fill="white" opacity="0.08" class="shine" transform="rotate(8, 120, 112)"/>
+      <!-- Shield shape -->
+      <ellipse cx="120" cy="132" rx="25" ry="38" fill="url(#shellGrad)" transform="rotate(6, 120, 132)"/>
+      <ellipse cx="122" cy="132" rx="23" ry="36" fill="none" stroke="#3d000a" stroke-width="0.8" transform="rotate(6, 120, 132)"/>
+      
+      <!-- Panel Detail line -->
+      <line x1="128" y1="102" x2="132" y2="164" stroke="#1f0206" stroke-width="1.5" opacity="0.6"/>
+      
+      <!-- Zecter Silver Ports -->
+      <circle cx="130" cy="110" r="3" fill="url(#chromeGrad)" stroke="#0f172a" stroke-width="0.8"/>
+      <circle cx="136" cy="118" r="3" fill="url(#chromeGrad)" stroke="#0f172a" stroke-width="0.8"/>
+      <circle cx="130" cy="110" r="1" fill="#1e293b"/>
+      <circle cx="136" cy="118" r="1" fill="#1e293b"/>
+      
+      <!-- Shine on Wing -->
+      <ellipse cx="124" cy="116" rx="7" ry="14" fill="#ffffff" opacity="0.1" class="shine" transform="rotate(6, 124, 116)"/>
     </g>
 
-    <!-- Center line between wing covers -->
-    <line x1="100" y1="93" x2="100" y2="168" stroke="#081508" stroke-width="2" opacity="0.6"/>
+    <!-- Mechanical Center Split Cover -->
+    <rect x="98" y="96" width="4" height="74" fill="url(#chromeGrad)" stroke="#0f172a" stroke-width="0.5" opacity="0.95"/>
+    <circle cx="100" cy="98" r="2" fill="#ff3b56" filter="url(#glow)"/>
+    <circle cx="100" cy="168" r="2" fill="#ff3b56" filter="url(#glow)"/>
 
-    <!-- === THORAX === -->
-    <ellipse cx="100" cy="105" rx="24" ry="18" fill="url(#bodyGrad)"/>
-    <ellipse cx="94" cy="100" rx="6" ry="5" fill="white" opacity="0.06" class="shine"/>
+    <!-- === THORAX PLATING === -->
+    <ellipse cx="100" cy="103" rx="25" ry="18" fill="url(#bodyGrad)"/>
+    <ellipse cx="100" cy="103" rx="23" ry="16" fill="none" stroke="#3d000a" stroke-width="0.8"/>
+    
+    <!-- Thorax central power latch ring -->
+    <circle cx="100" cy="103" r="10" fill="url(#darkGrad)" stroke="url(#chromeGrad)" stroke-width="2"/>
+    <circle cx="100" cy="103" r="6" fill="#0f172a"/>
+    <line x1="97" y1="103" x2="103" y2="103" stroke="#ff3b56" stroke-width="1.2" opacity="0.9" filter="url(#glow)"/>
+    
+    <!-- Thorax shoulder latch buttons -->
+    <circle cx="85" cy="95" r="3.5" fill="url(#chromeGrad)" stroke="#0f172a" stroke-width="0.8"/>
+    <circle cx="115" cy="95" r="3.5" fill="url(#chromeGrad)" stroke="#0f172a" stroke-width="0.8"/>
+    
+    <!-- Thorax shine highlight -->
+    <ellipse cx="94" cy="97" rx="5" ry="4" fill="#ffffff" opacity="0.08" class="shine"/>
 
-    <!-- === HEAD === -->
-    <ellipse cx="100" cy="80" rx="20" ry="16" fill="url(#headGrad)"/>
-    <!-- Head shine -->
-    <ellipse cx="94" cy="74" rx="5" ry="4" fill="white" opacity="0.10" class="shine"/>
+    <!-- === HEAD PLATING === -->
+    <ellipse cx="100" cy="78" rx="19" ry="14" fill="url(#headGrad)"/>
+    <ellipse cx="100" cy="78" rx="17" ry="12" fill="none" stroke="#2d0007" stroke-width="0.8"/>
+    <ellipse cx="94" cy="73" rx="4" ry="3" fill="#ffffff" opacity="0.12" class="shine"/>
 
-    <!-- === HORN (Rhinoceros horn!) === -->
+    <!-- === ANCHOR HORN === -->
     <g class="horn">
-      <!-- Main horn -->
-      <path d="M 100 67 C 95 60 92 48 96 35 C 97 30 100 25 100 25 C 100 25 103 30 104 35 C 108 48 105 60 100 67 Z"
-            fill="url(#headGrad)" stroke="#0a2010" stroke-width="0.5"/>
-      <!-- Horn top shine -->
-      <path d="M 99 40 C 97 45 96 52 98 60" stroke="white" stroke-width="1.5" opacity="0.2" fill="none" stroke-linecap="round"/>
+      <!-- Gold under-trim backing -->
+      <path d="M 92 72 
+               C 92 57, 90 44, 90 39
+               C 77 39, 61 35, 50 26
+               C 48 24, 50 18, 55 18
+               C 70 20, 87 23, 100 23
+               C 113 23, 130 20, 145 18
+               C 150 18, 152 24, 150 26
+               C 139 35, 123 39, 110 39
+               C 110 44, 108 57, 108 72 Z" 
+            fill="url(#goldGrad)" opacity="0.9"/>
 
-      <!-- Secondary small horn at base -->
-      <path d="M 100 68 C 97 64 93 62 91 60 C 93 61 96 64 100 68 Z"
-            fill="url(#headGrad)" stroke="#0a2010" stroke-width="0.5"/>
-      <path d="M 100 68 C 103 64 107 62 109 60 C 107 61 104 64 100 68 Z"
-            fill="url(#headGrad)" stroke="#0a2010" stroke-width="0.5"/>
+      <!-- Primary Red Metallic Horn Body -->
+      <path d="M 94 72 
+               C 94 58, 92 45, 92 40
+               C 80 40, 64 36, 54 28
+               C 52 26, 54 21, 58 21
+               C 72 23, 88 26, 100 26
+               C 112 26, 128 23, 142 21
+               C 146 21, 148 26, 146 28
+               C 136 36, 120 40, 108 40
+               C 108 45, 106 58, 106 72 Z" 
+            fill="url(#headGrad)" stroke="#4a000c" stroke-width="0.8"/>
+      
+      <!-- Horn Top Metallic Panel Line -->
+      <path d="M 100 70 V 42" stroke="#2d0007" stroke-width="1.2"/>
+      
+      <!-- Horn Top Chrome Core Detail -->
+      <polygon points="98,42 102,42 100,34" fill="url(#chromeGrad)" stroke="#0f172a" stroke-width="0.5"/>
+
+      <!-- Horn Chrome highlight reflection -->
+      <path d="M 97 38 C 82 38, 68 34, 60 27" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.25" stroke-linecap="round"/>
+      <path d="M 103 38 C 118 38, 132 34, 140 27" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.25" stroke-linecap="round"/>
+      
+      <!-- Secondary Small Base Horn Points -->
+      <path d="M 100 68 C 96 64, 91 62, 89 60 Q 93 61, 100 68 Z" fill="url(#chromeGrad)" stroke="#0f172a" stroke-width="0.5"/>
+      <path d="M 100 68 C 104 64, 109 62, 111 60 Q 107 61, 100 68 Z" fill="url(#chromeGrad)" stroke="#0f172a" stroke-width="0.5"/>
     </g>
 
-    <!-- === ANTENNAE === -->
+    <!-- === HIGH-TECH SENSOR ANTENNAE === -->
+    <!-- Left Antenna -->
     <g class="antenna-left">
-      <path d="M 86 72 C 78 65 70 58 62 52" stroke="#1a3a25" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-      <!-- Antenna tip ball -->
-      <circle cx="62" cy="52" r="3.5" fill="#2ECC71" opacity="0.8" filter="url(#glow)"/>
-      <circle cx="62" cy="52" r="2" fill="#7fffc4" opacity="0.9"/>
+      <path d="M 86 72 C 77 65, 68 58, 58 50" stroke="url(#chromeGrad)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <circle cx="58" cy="50" r="3.5" fill="url(#cyanGlow)" opacity="0.85" filter="url(#glow)"/>
+      <circle cx="58" cy="50" r="1.5" fill="#ffffff" opacity="0.9"/>
     </g>
+    <!-- Right Antenna -->
     <g class="antenna-right">
-      <path d="M 114 72 C 122 65 130 58 138 52" stroke="#1a3a25" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-      <circle cx="138" cy="52" r="3.5" fill="#2ECC71" opacity="0.8" filter="url(#glow)"/>
-      <circle cx="138" cy="52" r="2" fill="#7fffc4" opacity="0.9"/>
+      <path d="M 114 72 C 123 65, 132 58, 142 50" stroke="url(#chromeGrad)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <circle cx="142" cy="50" r="3.5" fill="url(#cyanGlow)" opacity="0.85" filter="url(#glow)"/>
+      <circle cx="142" cy="50" r="1.5" fill="#ffffff" opacity="0.9"/>
     </g>
 
-    <!-- === EYES === -->
-    <circle cx="91" cy="76" r="5" fill="#0a0a0a"/>
-    <circle class="eye-glow" cx="91" cy="76" r="3" fill="#2ECC71" opacity="0.8"/>
-    <circle cx="91" cy="74.5" r="1.2" fill="white" opacity="0.7"/>
+    <!-- === CYBERNETIC VISOR EYES === -->
+    <g>
+      <ellipse cx="88" cy="74" rx="5" ry="4" fill="#0f172a" stroke="#00e5ff" stroke-width="0.5"/>
+      <ellipse cx="88" cy="74" rx="3.5" ry="2.5" fill="url(#cyanGlow)" filter="url(#glow)" class="eye-glow"/>
+      <circle cx="86.5" cy="72.5" r="1" fill="#ffffff" opacity="0.8"/>
+    </g>
+    <g>
+      <ellipse cx="112" cy="74" rx="5" ry="4" fill="#0f172a" stroke="#00e5ff" stroke-width="0.5"/>
+      <ellipse cx="112" cy="74" rx="3.5" ry="2.5" fill="url(#cyanGlow)" filter="url(#glow)" class="eye-glow"/>
+      <circle cx="110.5" cy="72.5" r="1" fill="#ffffff" opacity="0.8"/>
+    </g>
 
-    <circle cx="109" cy="76" r="5" fill="#0a0a0a"/>
-    <circle class="eye-glow" cx="109" cy="76" r="3" fill="#2ECC71" opacity="0.8"/>
-    <circle cx="109" cy="74.5" r="1.2" fill="white" opacity="0.7"/>
-
-    <!-- === ABDOMEN TIP === -->
-    <ellipse cx="100" cy="164" rx="14" ry="8" fill="url(#bodyGrad)"/>
+    <!-- === TERMINAL ABDOMEN THRUSTER === -->
+    <path d="M 90 162 L 92 170 Q 100 176 108 170 L 110 162 Z" fill="url(#darkGrad)" stroke="#0f172a" stroke-width="1.2"/>
+    <ellipse cx="100" cy="168" rx="5" ry="1.8" fill="url(#cyanGlow)" filter="url(#glow)"/>
+    <ellipse cx="100" cy="168" rx="2" ry="0.8" fill="#ffffff"/>
 
   </g>
 
-  <!-- Sparkles around the beetle -->
-  <g opacity="0.6">
-    <circle cx="35" cy="60" r="2" fill="#2ECC71">
-      <animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite" begin="0s"/>
-      <animate attributeName="r" values="1;3;1" dur="2s" repeatCount="indefinite" begin="0s"/>
+  <!-- Futuristic Cyber Particles / Target Sparks (Cyan & Red) -->
+  <g opacity="0.7">
+    <circle cx="35" cy="60" r="2.2" fill="#00e5ff" filter="url(#glow)">
+      <animate attributeName="opacity" values="0;1;0" dur="2.4s" repeatCount="indefinite" begin="0s"/>
+      <animate attributeName="transform" type="translate" values="0,0; -5,-8" dur="2.4s" repeatCount="indefinite" additive="sum"/>
     </circle>
-    <circle cx="165" cy="75" r="2" fill="#2ECC71">
-      <animate attributeName="opacity" values="0;1;0" dur="2.3s" repeatCount="indefinite" begin="0.5s"/>
-      <animate attributeName="r" values="1;2.5;1" dur="2.3s" repeatCount="indefinite" begin="0.5s"/>
+    <circle cx="165" cy="70" r="2.2" fill="#00e5ff" filter="url(#glow)">
+      <animate attributeName="opacity" values="0;1;0" dur="2.8s" repeatCount="indefinite" begin="0.6s"/>
+      <animate attributeName="transform" type="translate" values="0,0; 5,-8" dur="2.8s" repeatCount="indefinite" additive="sum"/>
     </circle>
-    <circle cx="155" cy="165" r="1.5" fill="#7fffc4">
-      <animate attributeName="opacity" values="0;1;0" dur="1.8s" repeatCount="indefinite" begin="0.3s"/>
+    <circle cx="42" cy="152" r="1.8" fill="#ff3b56" filter="url(#glow)">
+      <animate attributeName="opacity" values="0;0.9;0" dur="2.1s" repeatCount="indefinite" begin="0.3s"/>
     </circle>
-    <circle cx="45" cy="155" r="1.5" fill="#7fffc4">
-      <animate attributeName="opacity" values="0;1;0" dur="2.1s" repeatCount="indefinite" begin="0.8s"/>
+    <circle cx="158" cy="152" r="1.8" fill="#ff3b56" filter="url(#glow)">
+      <animate attributeName="opacity" values="0;0.9;0" dur="1.9s" repeatCount="indefinite" begin="1.1s"/>
     </circle>
-    <circle cx="100" cy="185" r="2" fill="#2ECC71">
-      <animate attributeName="opacity" values="0;1;0" dur="2.5s" repeatCount="indefinite" begin="1s"/>
+    <circle cx="100" cy="180" r="1.5" fill="#00e5ff" filter="url(#glow)">
+      <animate attributeName="opacity" values="0;1;0" dur="1.5s" repeatCount="indefinite" begin="0.2s"/>
+      <animate attributeName="cy" values="172;192" dur="1.5s" repeatCount="indefinite"/>
     </circle>
   </g>
 </svg>
