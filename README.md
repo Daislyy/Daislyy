@@ -1,9 +1,9 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=8B0000&height=180&section=header&text=Daislyy&fontSize=50&fontColor=F5F5F5&animation=fadeIn&fontAlignY=35"/>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=8B0000&height=150&section=header&text=Daislyy&fontSize=50&fontColor=F5F5F5&animation=fadeIn&fontAlignY=35"/>
 
-<!-- Banner Kurisu - simpan file gif kamu di repo, misal: assets/kurisu-banner.gif -->
-<img src="assets/k l e e n e x 4 u.gif" alt="Makise Kurisu - Steins;Gate" width="70%"/>
+<!-- Banner Kurisu -->
+<img src="assets/k l e e n e x 4 u.gif" alt="Makise Kurisu - Steins;Gate" width="60%"/>
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=DC143C&center=true&vCenter=true&width=600&lines=El+Psy+Kongroo;Full+Stack+Developer;Building+across+worldlines" alt="Typing SVG"/>
 
@@ -58,17 +58,19 @@ const daislyy = {
   <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Daislyy&layout=compact&langs_count=8&hide_border=true&bg_color=0D1117&title_color=DC143C&text_color=F5F5F5"/>
 </div>
 
+<!-- Ganti masing-masing src di bawah kalau mau pakai gif Kurisu yang beda-beda -->
 <div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Daislyy&hide_border=true&background=0D1117&ring=DC143C&fire=DC143C&currStreakLabel=F5F5F5" alt="GitHub Streak"/>
+  <img src="assets/k l e e n e x 4 u.gif" alt="Kurisu 1" width="32%"/>
+  <img src="assets/k l e e n e x 4 u.gif" alt="Kurisu 2" width="32%"/>
+  <img src="assets/k l e e n e x 4 u.gif" alt="Kurisu 3" width="32%"/>
 </div>
 
 ---
 
 ## Contribution Snake
 
-<!-- Dihasilkan otomatis oleh snake.yml, sesuaikan branch "output" kalau workflow kamu pakai nama lain -->
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Daislyy/Daislyy/output/github-contribution-grid-snake-dark.svg" alt="Snake animation"/>
+  <img width="100%" src="https://raw.githubusercontent.com/Daislyy/Daislyy/output/github-contribution-grid-snake-dark.svg" alt="Snake animation"/>
 </div>
 
 ---
@@ -77,9 +79,9 @@ const daislyy = {
 
 <div align="center">
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-8B0000?style=for-the-badge&logo=linkedin&logoColor=F5F5F5)](https://linkedin.com/in/Daislyy)
-[![Instagram](https://img.shields.io/badge/Instagram-8B0000?style=for-the-badge&logo=instagram&logoColor=F5F5F5)](https://instagram.com/Daislyy)
-[![Twitter](https://img.shields.io/badge/Twitter-8B0000?style=for-the-badge&logo=twitter&logoColor=F5F5F5)](https://twitter.com/Daislyy)
+[![Facebook](https://img.shields.io/badge/Facebook-8B0000?style=for-the-badge&logo=facebook&logoColor=F5F5F5)](https://www.facebook.com/azuto.mizanami)
+[![Instagram](https://img.shields.io/badge/Instagram-8B0000?style=for-the-badge&logo=instagram&logoColor=F5F5F5)](https://www.instagram.com/dlyy.23_/)
+[![Discord](https://img.shields.io/badge/Discord-8B0000?style=for-the-badge&logo=discord&logoColor=F5F5F5)](https://discord.com/users/your-discord-id)
 [![Email](https://img.shields.io/badge/Email-8B0000?style=for-the-badge&logo=gmail&logoColor=F5F5F5)](mailto:your@email.com)
 
 </div>
@@ -92,4 +94,4 @@ const daislyy = {
 
 </div>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=8B0000&height=100&section=footer"/>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=8B0000&height=150&section=footer"/>
