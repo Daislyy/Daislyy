@@ -3,7 +3,7 @@
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=8B0000&height=150&section=header&text=Daislyy&fontSize=50&fontColor=F5F5F5&animation=fadeIn&fontAlignY=35"/>
 
 <!-- Banner Kurisu -->
-<img src="assets/k l e e n e x 4 u.gif" alt="Makise Kurisu - Steins;Gate" width="60%"/>
+<img src="assets/k l e e n e x 4 u.gif" alt="Makise Kurisu - Steins;Gate" width="74%"/>
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=DC143C&center=true&vCenter=true&width=600&lines=El+Psy+Kongroo;Full+Stack+Developer;Building+across+worldlines" alt="Typing SVG"/>
 
@@ -53,16 +53,18 @@ const daislyy = {
 
 ## Kurisu Gallery
 
+<!-- Ganti masing-masing src kalau mau pakai gif Kurisu yang beda-beda. Ukuran dipaksa sama (280x200) biar sejajar rapi -->
 <div align="center">
-  <img src="assets/kurisu1.gif" alt="Kurisu 1" width="280" height="200" style="object-fit:cover;"/>
-  <img src="assets/kurisu2.gif" alt="Kurisu 2" width="280" height="200" style="object-fit:cover;"/>
-  <img src="assets/kurisu3.gif" alt="Kurisu 3" width="280" height="200" style="object-fit:cover;"/>
+  <img src="assets/kurisu1.gif" alt="Kurisu 1" width="220" height="160" style="object-fit:cover;"/>
+  <img src="assets/kurisu2.gif" alt="Kurisu 2" width="220" height="160" style="object-fit:cover;"/>
+  <img src="assets/kurisu3.gif" alt="Kurisu 3" width="220" height="160" style="object-fit:cover;"/>
 </div>
 
 ---
 
 ## Contribution Snake
 
+<!-- Kalau belum muncul: jalanin dulu workflow "Generate Snake Animation" di tab Actions repo (Run workflow) biar branch "output" kebentuk -->
 <div align="center">
   <img width="100%" src="https://raw.githubusercontent.com/Daislyy/Daislyy/output/github-contribution-grid-snake.svg" alt="Snake animation"/>
 </div>
