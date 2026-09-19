@@ -51,18 +51,12 @@ const daislyy = {
 
 ---
 
-## GitHub Stats
+## Kurisu Gallery
 
 <div align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=Daislyy&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&bg_color=0D1117&title_color=DC143C&icon_color=DC143C&text_color=F5F5F5"/>
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Daislyy&layout=compact&langs_count=8&hide_border=true&bg_color=0D1117&title_color=DC143C&text_color=F5F5F5"/>
-</div>
-
-<!-- Ganti masing-masing src di bawah kalau mau pakai gif Kurisu yang beda-beda -->
-<div align="center">
-  <img src="assets/k l e e n e x 4 u.gif" alt="Kurisu 1" width="32%"/>
-  <img src="assets/k l e e n e x 4 u.gif" alt="Kurisu 2" width="32%"/>
-  <img src="assets/k l e e n e x 4 u.gif" alt="Kurisu 3" width="32%"/>
+  <img src="assets/kurisu1.gif" alt="Kurisu 1" width="280" height="200" style="object-fit:cover;"/>
+  <img src="assets/kurisu2.gif" alt="Kurisu 2" width="280" height="200" style="object-fit:cover;"/>
+  <img src="assets/kurisu3.gif" alt="Kurisu 3" width="280" height="200" style="object-fit:cover;"/>
 </div>
 
 ---
@@ -70,7 +64,7 @@ const daislyy = {
 ## Contribution Snake
 
 <div align="center">
-  <img width="100%" src="https://raw.githubusercontent.com/Daislyy/Daislyy/output/github-contribution-grid-snake-dark.svg" alt="Snake animation"/>
+  <img width="100%" src="https://raw.githubusercontent.com/Daislyy/Daislyy/output/github-contribution-grid-snake.svg" alt="Snake animation"/>
 </div>
 
 ---
@@ -89,8 +83,6 @@ const daislyy = {
 <div align="center">
 
 *"All i wanna do is trade this life for something new"*
-
-![Profile Views](https://komarev.com/ghpvc/?username=Daislyy&color=8B0000&style=for-the-badge&label=PROFILE+VIEWS)
 
 </div>
 
