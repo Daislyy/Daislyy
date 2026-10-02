@@ -5,7 +5,7 @@
 <!-- Banner Kurisu -->
 <img src="assets/k l e e n e x 4 u.gif" alt="Makise Kurisu - Steins;Gate" width="74%"/>
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=DC143C&center=true&vCenter=true&width=600&lines=El+Psy+Kongroo;Full+Stack+Developer;Building+across+worldlines" alt="Typing SVG"/>
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=DC143C&center=true&vCenter=true&width=600&lines=El+Psy+Congroo;Full+Stack+Developer;Building+across+worldlines" alt="Typing SVG"/>
 
 </div>
 
